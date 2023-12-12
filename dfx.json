@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "neven_earth_backend": {
+      "main": "src/neven_earth_backend/main.mo",
+      "type": "motoko"
+    },
+    "neven_earth_frontend": {
+      "dependencies": [
+        "neven_earth_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/neven_earth_frontend/src/index.html"
+      },
+      "source": [
+        "src/neven_earth_frontend/assets",
+        "dist/neven_earth_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
